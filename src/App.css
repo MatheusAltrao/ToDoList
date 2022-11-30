@@ -1,38 +1,242 @@
-.App {
+h1 {
+  color: #fff;
+}
+
+.app {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   text-align: center;
+  width: 100%;
+  padding-inline: 1rem;
+  max-width: 400px;
+
+  margin: 0 auto;
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+form {
+  padding: 1rem;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.4);
+
   display: flex;
+  align-items: center;
+
   flex-direction: column;
+
+  border-radius: 8px;
+  margin-bottom: 1rem;
+
+  border: 1px solid var(--border-color);
+
+  background-color: #e4e4e4;
+
+  margin-inline: auto;
+}
+
+label {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+
+  border: 1px solid #e5e7eb;
+  outline: none;
+
+  background-color: #f9fafb;
+
+  margin-bottom: 1rem;
+
+}
+
+
+.add {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: var(--second-color);
+
+  border: none;
+  border-radius: 4px;
+
+  margin-bottom: 1rem;
+
+  color: #fff;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+h2,
+p {
+  color: #fff;
+}
+
+
+#itemTodo {
+  background-color: #e4e4e4;
+  margin: 0.5rem 0;
+
+  border-radius: 4px;
+
+  text-align: left;
+
+  padding: 1rem;
+
+
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+
+}
+
+#itemTodo p {
+  color: #000;
+}
+
+.actions {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.5rem;
+
+  user-select: none;
 }
 
-.App-link {
-  color: #61dafb;
+.icons {
+  cursor: pointer;
+  color: var(--primary-color);
 }
 
-@keyframes App-logo-spin {
+.todo-done {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+
+.term {
+  font-size: 12px;
+}
+
+
+.buttons-colors {
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding: 2rem 0;
+
+  width: 100%;
+}
+
+.buttons-colors div {
+  background-color: red;
+  background-color: #e4e4e4;
+  padding: 1rem;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+}
+
+
+.buttons-colors button {
+  cursor: pointer;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  border: 1px solid #e4e4e4;
+}
+
+
+#cyam {
+  background-color: #5accd3;
+}
+
+#orange {
+  background-color: #ff6501;
+}
+
+#red {
+  background-color: #f5224c;
+}
+
+#purple {
+  background-color: #7c17b4;
+}
+
+/* animation */
+
+.buttons-colors-cards {
+  animation: fromRight 0.5s ease backwards;
+
+}
+
+h1 {
+  animation: fromLeft 0.5s ease backwards;
+  animation-delay: 0.2s;
+}
+
+#form {
+  animation: fromLeft 0.5s ease backwards;
+  animation-delay: 0.3s;
+}
+
+#itemTodo {
+  animation: fromLeft 0.5s ease backwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes fromRight {
+
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateX(30px);
   }
+
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fromLeft {
+
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
